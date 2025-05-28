@@ -10,17 +10,17 @@ public class RegistroTemperaturas {
     }
 
     public void mostrarCiudadesOrdenadas() {
-        System.out.println("Ciudades ordenadas alfabeticamente: ");
-        temperaturas.forEach((ciudad, temp) -> System.out.println(ciudad ": " + temp + "ºC"));
+        System.out.println("Ciudades ordenadas alfabéticamente:");
+        temperaturas.forEach((ciudad, temp) -> System.out.println(ciudad + ": " + temp + "°C"));
     }
 
-    public void mostrarExtremos(){
+    public void mostrarExtremos() {
         if (!temperaturas.isEmpty()) {
             String ciudadFria = Collections.min(temperaturas.entrySet(), Map.Entry.comparingByValue()).getKey();
             String ciudadCalida = Collections.max(temperaturas.entrySet(), Map.Entry.comparingByValue()).getKey();
 
-        System.out.println("Ciudad más fría: " + ciudadFria + "(" + temperaturas.get(ciudadFria) + "°C)");
-            System.out.println("Ciudad más calida: " + ciudadCalida + "(" + temperaturas.get(ciudadCalida) + "°C)");
+            System.out.println("Ciudad más fría: " + ciudadFria + " (" + temperaturas.get(ciudadFria) + "°C)");
+            System.out.println("Ciudad más cálida: " + ciudadCalida + " (" + temperaturas.get(ciudadCalida) + "°C)");
         }
     }
 }
